@@ -1,0 +1,90 @@
+<script>
+//Задание 1.
+//С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+
+var x = 0;
+var i = 2;
+document.write("Простые числа от 0 до 100: ");
+while (x <= 100) {
+    i = 2;
+    if(x == 0 || x == 1){
+        x++;
+        continue; 
+    }
+    while (x % i != 0){
+        i++;
+    }
+    if(i == x){
+        document.write(x + ", ");
+    }
+    x++;
+}
+
+
+
+//Задание 2-3.
+// Организовать такой массив для хранения товаров в корзине;
+// Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+var goods = [
+    {
+        title: "Товар 1",
+        price: 100,
+        count: 2
+    },
+    {
+        title: "Товар 2",
+        price: 200,
+        count: 5
+    }
+];
+
+function countBasketPrice(mas){
+    var sum = 0;
+    for(var x of mas){
+        sum += x.price * x.count;
+    }
+    document.write("<br>Сумма к оплате: " + sum + "<br>");
+    return sum;
+}
+
+countBasketPrice(goods);
+
+
+
+//Задание 4*.
+//Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так: for(…){// здесь пусто}
+
+for(var i = 0; i <= 9; document.write(i++));
+
+
+document.write("<br>");
+//Задание 5*.
+//Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+//x
+//xx
+//xxx
+//xxxx
+//xxxxx
+
+// пирамида с помощью document.write
+for(var i = 0; i < 20; i++){
+    for (var j = 0; j <= i; j++){
+        document.write("x");
+    }
+    document.write("<br>");
+}
+
+//пирамида с помощью console.log
+var masx = [];
+for(var i = 0; i < 20; i++){
+    for (var j = 0; j <= i; j++){
+        masx.push("x");
+    }
+    var str = masx.join("");
+    console.log(str);
+    masx = [];
+}
+
+
+</script>
