@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         td{
-            border: 1px solid black;
+            border: 1px solid gray;
             width: 80px;
             height: 80px;
-            
+            box-sizing: border-box;   
         }
     </style>
-    <title>Document</title>
+    <title>Задание 1 (дз5)</title>
 </head>
 <body>
     <div></div>
 
 
     <script>
-        
+
         // ЗАДАНИЕ 1.
 
     var table = document.createElement("table");
@@ -32,7 +32,7 @@
             var td = document.createElement("td");
             tr.append(td);
             if((j + i) % 2 && i != 0 && j != 0 && i != 9 && j != 9){
-                td.style.backgroundColor = "black";
+                td.style.backgroundColor = "gray";
             }
             if(i == 0 && j != 0 && j != 9){
                 td.innerHTML = "<h2>" + ("&#" + (64 + j)) + "</h2>";

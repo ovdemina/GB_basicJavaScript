@@ -8,10 +8,10 @@
         td{
             width: 80px;
             height: 80px;   
-            box-sizing: border-box;       
+            box-sizing: border-box;    
         }
     </style>
-    <title>Задание 2 (дз5)</title>
+    <title>Задание 3 (дз5)</title>
 </head>
 <body>
     <div></div>
@@ -19,7 +19,7 @@
 
     <script>
         
-        // ЗАДАНИЕ 2.
+        // ЗАДАНИЕ 3*.
 
     var table = document.createElement("table");
     table.style.textAlign = "center";
@@ -35,76 +35,65 @@
             }
             if(i == 0 && j != 0 && j != 9){
                 td.style.borderBottom = "1px solid gray";
-                td.innerHTML = "<h2>" + ("&#" + (64 + j)) + "</h2>";
+                td.innerHTML = "<h1>" + ("&#" + (64 + j)) + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 9 && j != 0 && j != 9){
                 td.style.borderTop = "1px solid gray";
-                td.innerHTML = "<h2>" + ("&#" + (64 + j)) + "</h2>";
+                td.innerHTML = "<h1>" + ("&#" + (64 + j)) + "</h1>";
             }
             if(j == 0 && i != 0 && i != 9){
                 td.style.borderRight = "1px solid gray";
-                td.innerHTML = "<h2>" + (9 - i) + "</h2>";
+                td.innerHTML = "<h1>" + (9 - i) + "</h1>";
             }
             if(j == 9 && i != 0 && i != 9){
                 td.style.borderLeft = "1px solid gray";
-                td.innerHTML = "<h2>" + (9 - i) + "</h2>";
+                td.innerHTML = "<h1>" + (9 - i) + "</h1>";
                 td.style.transform = "rotate(180deg)";
 
             }
             if(i == 2 && j != 0 && j != 9){
-                td.innerHTML = "<h2>" + "П" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9823" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 1 && j == 1 || i == 1 && j == 8){
-                td.innerHTML = "<h2>" + "Л" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9820" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 1 && j == 2 || i == 1 && j == 7){
-                td.innerHTML = "<h2>" + "К" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9822" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 1 && j == 3 || i == 1 && j == 6){
-                td.innerHTML = "<h2>" + "С" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9821" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 1 && j == 4){
-                td.innerHTML = "<h2>" + "Ф" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9819" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 1 && j == 5){
-                td.innerHTML = "<h2>" + "К" + "</h2>";
-                td.style.color = "#333333";
+                td.innerHTML = "<h1>" + "&#9818" + "</h1>";
                 td.style.transform = "rotate(180deg)";
             }
             if(i == 7 && j != 0 && j != 9){
-                td.innerHTML = "<h2>" + "П" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9817" + "</h1>";
+                
             }
             if(i == 8 && j == 1 || i == 8 && j == 8){
-                td.innerHTML = "<h2>" + "Л" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9814" + "</h1>";
             }
             if(i == 8 && j == 2 || i == 8 && j == 7){
-                td.innerHTML = "<h2>" + "К" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9816" + "</h1>";
             }
             if(i == 8 && j == 3 || i == 8 && j == 6){
-                td.innerHTML = "<h2>" + "С" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9815" + "</h1>";
             }
             if(i == 8 && j == 4){
-                td.innerHTML = "<h2>" + "Ф" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9813" + "</h1>";
             }
             if(i == 8 && j == 5){
-                td.innerHTML = "<h2>" + "К" + "</h2>";
-                td.style.color = "#F5E8F8";
+                td.innerHTML = "<h1>" + "&#9812" + "</h1>";
             }
         }
     }
