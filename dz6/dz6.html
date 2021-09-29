@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .foto_small{
+            text-align: center;
+        }
+        .foto_big{
+            height: 400px;
+            padding-left: 43%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="foto_small">
+        <img id="i1" src="small/1.jpg" alt="foto_1" height="100">
+        <img id="i2" src="small/2.jpg" alt="foto_2" height="100">
+        <img id="i3" src="small/3.jpg" alt="foto_3" height="100">
+    </div>
+
+    <script>
+        var images = document.querySelectorAll("img");
+        for(var item of images){
+            item.onclick = f;
+        }
+        
+
+        function f(e){   
+            var img = document.createElement("img");
+            img.src = "big/" + (e.target.id[1]) + ".jpg";
+            document.body.append(img);
+            img.classList.add("foto_big");
+        }
+    </script>
+    
+</body>
+</html>
