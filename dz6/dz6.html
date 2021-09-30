@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dz6</title>
+    <style>
+        .foto_small{
+            text-align: center;
+        }
+        .foto_big{
+            height: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>  
+</head>
+<body>
+    <div class="foto_small">
+        <img src="small/1.jpg" alt="foto_1" height="100">
+        <img src="small/2.jpg" alt="foto_2" height="100">
+        <img src="small/3.jpg" alt="foto_3" height="100">
+    </div>
+    <script>
+        var images = document.querySelectorAll("img");
+        var none = 1;
+        for(var item of images){
+                item.onclick = f;
+        }
+        function f(e){   
+            if(none == 0){
+                document.getElementById("none").remove();
+                var imgBig = document.createElement("img");
+                var nameBig = e.target.src.length - 5;
+                imgBig.src = "big/" + e.target.src[nameBig] + ".jpg";
+                document.body.append(imgBig);
+                imgBig.id = "none";
+                imgBig.classList.add("foto_big");
+            }
+            else{
+                var imgBig = document.createElement("img");
+                var nameBig = e.target.src.length - 5;
+                imgBig.src = "big/" + e.target.src[nameBig] + ".jpg";
+                document.body.append(imgBig);
+                imgBig.id = "none";
+                imgBig.classList.add("foto_big");
+                none = 0;
+            }
+        }
+    </script>
+</body>
+</html>
