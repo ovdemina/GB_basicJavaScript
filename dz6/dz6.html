@@ -11,10 +11,8 @@
         }
         .foto_big{
             height: 400px;
-            padding-left: 43%;
-        }
-        .foto_big_none{
-            display: none;
+            display: block;
+            margin: 0 auto;
         }
     </style>
     
@@ -28,29 +26,29 @@
 
     <script>
         var images = document.querySelectorAll("img");
- //       var none;
+        var none = 1;
         for(var item of images){
-  //          if(none){
                 item.onclick = f;
- //           }
-            // else{
-            //     item.onclick = g;
-            // }
         }
-
 
         function f(e){   
-            
-            var imgBig = document.createElement("img");
-            imgBig.src = "big/" + (e.target.id[1]) + ".jpg";
-            document.body.append(imgBig);
-            imgBig.classList.add("foto_big");
- //           none = 0;
-  //          alert (none);
+            if(none == 0){
+                document.getElementById("none").remove();
+                var imgBig = document.createElement("img");
+                imgBig.src = "big/" + (e.target.id[1]) + ".jpg";
+                document.body.append(imgBig);
+                imgBig.id = "none";
+                imgBig.classList.add("foto_big");
+            }
+            else{
+                var imgBig = document.createElement("img");
+                imgBig.src = "big/" + (e.target.id[1]) + ".jpg";
+                document.body.append(imgBig);
+                imgBig.id = "none";
+                imgBig.classList.add("foto_big");
+                none = 0;
+            }
         }
-        // function g(){
-        //     classList.add("foto_big_none");
-        // }
     </script>
     
 </body>
