@@ -9,6 +9,7 @@ var snake_timer; // Таймер змейки
 var food_timer; // Таймер для еды
 var score = 0; // Результат
 
+
 function init() {
     prepareGameField(); // Генерация поля
 
@@ -68,6 +69,8 @@ function startGame() {
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
     setTimeout(createFood, 5000);
+    var scoreOnline = document.querySelector('.result');
+        scoreOnline.innerHTML = "Текущий счет: " + score;
 }
 
 /**
